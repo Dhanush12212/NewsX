@@ -1,0 +1,20 @@
+ 
+.nav-link.active {
+    font-weight: bold; 
+    background-color: rgba(255, 255, 255, 0.1);  
+    border-radius: 5px; 
+} 
+.nav-item:hover
+{
+    background-color:rgba(143, 148, 153, 0.503);  
+}
+.nav-item:focus
+{
+    background-color:black;  
+    color:white;
+}
+.nav-item.active .nav-link {
+    background-color: #007bff; /* or any color */
+    color: white; /* to contrast with background */
+  }
+  
