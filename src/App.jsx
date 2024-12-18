@@ -15,8 +15,7 @@ const App = () => {
 
   return (
     <>
-      <Router>
-        <div style={{ overflowX: "hidden" }}>
+      <Router> 
           <Navbar />
           <LoadingBar color="#f11946" height={3} progress={progress} />
           <Routes>
@@ -28,10 +27,9 @@ const App = () => {
             <Route exact path="/science" element={<News setProgress={handleSetProgress} key="science" pageSize={8} country="us" category="science"/>}/>
             <Route exact path="/sports" element={<News setProgress={handleSetProgress} key="sports" pageSize={8} country="us" category="sports"/>}/>
             <Route exact path="/technology" element={<News setProgress={handleSetProgress} key="technology" pageSize={8} country="us" category="technology"/>}/>
-          </Routes>
-        </div>
+          </Routes> 
       </Router>
-    </>
+    </> 
   );
 };
 

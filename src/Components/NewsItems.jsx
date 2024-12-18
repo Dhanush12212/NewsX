@@ -4,8 +4,8 @@ const NewsItems=(props)=>{
     let { title, description, imageUrl, newsUrl,Author,date,Source } =  props;
     return (
       <>
-      <div className="my-3 px-1">
-        <div className="card bg-dark text-light p-2">
+      <div className="my-3  "> 
+        <div className="card bg-dark text-light p-2" style={{ height:'400px' ,overflow:'hidden'}}>
           <img src={imageUrl?imageUrl:"https://t4.ftcdn.net/jpg/02/09/53/11/360_F_209531103_vL5MaF5fWcdpVcXk5yREBk3KMcXE0X7m.jpg"} className="card-img-top" alt="Headline" />
             <div className="card-body">
               <div style={{display:'flex',justifyContent:'flex-end',position:'absolute',right:'0',top:'0'}}>

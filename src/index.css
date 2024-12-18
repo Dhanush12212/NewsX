@@ -1,4 +1,9 @@
- 
+ body,html
+ {
+    background-color: rgb(193, 192, 192);
+    overflow-x: hidden; 
+    max-width: full;
+ }
 .nav-link.active {
     font-weight: bold; 
     background-color: rgba(255, 255, 255, 0.1);  
@@ -8,6 +13,7 @@
 {
     background-color:rgba(143, 148, 153, 0.503);  
 }
+
 .nav-item:focus
 {
     background-color:black;  
@@ -17,4 +23,16 @@
     background-color: #007bff; /* or any color */
     color: white; /* to contrast with background */
   }
-  
+
+  .NewwsItems
+  {
+    height: 100px;
+  }
+
+  @media only screen and(max-width:750px)
+  {
+    #NewwsItems
+    {
+        display: flex; 
+    }
+  }
