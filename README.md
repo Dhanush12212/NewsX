@@ -18,7 +18,7 @@
 <h2>Installation and Setup</h2>
 
 <h3>1. Clone the Repository</h3>
-  <a>git clone https://github.com/your-username/NewX.git</a>
+  <a>git clone https://github.com/Dhanush12212/NewsX.git</a>
   cd NewX
 
 <h3>2. Install Dependencies</h3>
