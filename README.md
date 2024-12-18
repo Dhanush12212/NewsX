@@ -1,27 +1,33 @@
 <h1>NewsX</h1>
 
-NewX is a real-time news application that leverages a News API to fetch and display the latest news articles. The application is built using React.js for the frontend and styled with Bootstrap to provide a responsive and user-friendly interface.
+<p>NewX is a real-time news application that leverages a News API to fetch and display the latest news articles. The application is built using React.js for the frontend and styled with Bootstrap to provide a responsive and user-friendly interface.</p>
 
-Features
+<h2>Features</h2>
+1. Real-time News Updates: Fetches the latest news in real time from a reliable News API.
+2. Responsive Design: Ensures compatibility across all devices, including desktops, tablets, and smartphones, using Bootstrap.
+3. Category Filters: Allows users to view news articles by categories such as Technology, Sports, Business, and more. 
+4. Lightweight and Fast: Built with React.js, ensuring smooth performance and fast loading times.
 
-Real-time News Updates: Fetches the latest news in real time from a reliable News API.
+<h2>Tech Stack</h2>
+   Frontend: React.js
 
-Responsive Design: Ensures compatibility across all devices, including desktops, tablets, and smartphones, using Bootstrap.
+   Styling: Bootstrap
 
-Category Filters: Allows users to view news articles by categories such as Technology, Sports, Business, and more.
+   API: News API
 
-Search Functionality: Enables users to search for news articles by keywords.
+<h2>Installation and Setup</h2>
 
-Lightweight and Fast: Built with React.js, ensuring smooth performance and fast loading times.
+<h3>1. Clone the Repository</h3>
+  <a>git clone https://github.com/your-username/NewX.git</a>
+  cd NewX
 
-Tech Stack
+<h3>2. Install Dependencies</h3>
+  npm install
 
-Frontend: React.js
+<h3>3. Add API Key</h3>
+  Sign up for an API key from the News API.
+  Create a .env file in the root directory and add the following:
+    REACT_APP_NEWS_API_KEY=your_api_key_here
 
-Styling: Bootstrap
-
-API: News API
-
-Installation and Setup
-
-Clone the Repository
+<h3>4. Start the Development Server</h3>
+  npm run dev
