@@ -1,6 +1,5 @@
-NewsX
-
-NewX is a real-time news application that leverages a News API to fetch and display the latest news articles. The application is built using React.js for the frontend and styled with Bootstrap to provide a responsive and user-friendly interface.
+<h1>NewsX</h1>
+   NewX is a real-time news application that leverages a News API to fetch and display the latest news articles. The application is built using React.js for the frontend and styled with Bootstrap to provide a responsive and user-friendly interface.
 
 Features
 
