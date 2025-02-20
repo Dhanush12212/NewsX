@@ -1,13 +1,11 @@
-import React from 'react' 
-import { assets } from '../assets/assets'
+import React from 'react'; 
 
-const Spinner=()=>
-{ 
+const Spinner = () => { 
   return (
-    <div>
-        <img src={assets.loading} alt="loadinng" />
-      </div>
-    )
-}
+    <div className="spinner-container">
+      <div className="spinner"></div>
+    </div>
+  );
+};
 
-export default Spinner
+export default Spinner;

@@ -1,9 +1,7 @@
-import loading from './spinner.gif' ;
 import linkedIn from './LinkedinImg.png';
 import Gmail from './GmailImg.png';
 import Instagram from './InstagramImg.png';
-export const assets={
-    loading,
+export const assets={ 
     linkedIn,
     Gmail,
     Instagram
