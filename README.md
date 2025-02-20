@@ -27,7 +27,7 @@
 <h3>3. Add API Key</h3>
   Sign up for an API key from the News API.
   Create a .env file in the root directory and add the following:
-    REACT_APP_NEWS_API_KEY=your_api_key_here
+    VITE_NEWS_API_KEY=your_api_key_here
 
 <h3>4. Start the Development Server</h3>
   npm run dev
