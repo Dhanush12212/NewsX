@@ -4,6 +4,8 @@ import News from "./Components/News";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoadingBar from "react-top-loading-bar"; 
 
+
+
 const App = () => {
   // State for progress
   const [progress, setProgress] = useState(0);
@@ -15,6 +17,7 @@ const App = () => {
 
   return (
     <>
+
       <Router> 
           <Navbar />
           <LoadingBar color="#f11946" height={3} progress={progress} />

@@ -49,8 +49,8 @@ const News = (props) => {
 
     const fetchMoreData = async () => {
         try {
-            const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
-            const nextPage = page + 1; // ✅ Use new page value directly in API request
+            const API_KEY = import.meta.env.VITE_NEWS_API_KEY; 
+            const nextPage = page + 1; 
 
             const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apikey=${API_KEY}&page=${nextPage}&pageSize=${props.pageSize}`;
 
@@ -73,7 +73,7 @@ const News = (props) => {
     return (
         <>
             <h1 className="text-center" style={{ margin: '35px 0px', marginTop: '90px' }}>
-                NewsMonkey - Top {capitalizeFirstLetter(props.category)} Headlines
+                NewsX - Top {capitalizeFirstLetter(props.category)} Headlines
             </h1>
             {loading && <Spinner />}
             <InfiniteScroll
