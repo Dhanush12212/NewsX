@@ -51,7 +51,7 @@ const Navbar = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Contact Me
+                About Me
               </button>
               <ul className="dropdown-menu text-center">
                 <li>
@@ -65,8 +65,8 @@ const Navbar = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.instagram.com/mr__perfect_41/" target="_blank" rel="noopener noreferrer">
-                    <img style={{ width: '50px', height: '50px' }} src={assets.Instagram} alt="Instagram" />
+                  <a href="https://github.com/Dhanush12212" target="_blank" rel="noopener noreferrer">
+                    <img style={{ width: '40px', height: '40px' }} src={assets.GitHub} alt="GitHub" />
                   </a>
                 </li>
               </ul>
