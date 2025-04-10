@@ -3,6 +3,7 @@ import NewsItem from './NewsItems';
 import Spinner from './Spinner';
 import PropTypes from 'prop-types';
 import InfiniteScroll from "react-infinite-scroll-component";
+import {API_URL} from './../../config';
 
 const News = (props) => {
     const [articles, setArticles] = useState([]);
@@ -14,7 +15,7 @@ const News = (props) => {
         string.charAt(0).toUpperCase() + string.slice(1);
 
     const buildUrl = (pageNumber) => {
-        return `http://localhost:5000/api/news?country=${props.country}&category=${props.category}&page=${pageNumber}&pageSize=${props.pageSize}`;
+        return `${API_URL}/news?country=${props.country}&category=${props.category}&page=${pageNumber}&pageSize=${props.pageSize}`;
     };
 
     const updateNews = async () => {
