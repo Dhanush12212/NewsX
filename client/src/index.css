@@ -1,0 +1,130 @@
+body, html {
+  background-color: rgb(193, 192, 192);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-link {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffc107 !important;
+}
+.dropdown-menu {
+  background-color: #212529;
+  border-radius: 10px;
+  min-width: 140px;
+  padding: 8px;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.dropdown-menu a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 6px 0;
+  padding: 4px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.dropdown-menu a img {
+  transition: transform 0.2s ease;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+}
+
+.dropdown-icon {
+  width: 70px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-icon:hover {
+  transform: scale(1.2);
+}
+
+
+.dropdown-menu a:hover img {
+  transform: scale(1.08);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 
+
+@media only screen and (max-width: 750px) {
+  .NewsItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .news-card {
+    width: 90% !important;
+  }
+
+  .card-title,
+  .card-text {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .NewsItems {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .news-card {
+    width: 90% !important;
+    margin: auto;
+  }
+
+  .card-title,
+  .card-text {
+    text-align: center;
+  }
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-top: 5px solid #090909;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
