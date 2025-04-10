@@ -17,6 +17,7 @@ const News = (props) => {
     const buildUrl = (pageNumber) => {
         return `${API_URL}/news?country=${props.country}&category=${props.category}&page=${pageNumber}&pageSize=${props.pageSize}`;
     };
+      
 
     const updateNews = async () => {
         props.setProgress(10);

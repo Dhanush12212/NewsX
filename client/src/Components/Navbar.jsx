@@ -57,22 +57,22 @@ const Navbar = () => {
               About Me
             </button>
             <ul className="dropdown-menu dropdown-menu-end p-3">
-  <li className="text-center">
-    <a href="https://www.linkedin.com/in/dhanush-abb811259/" target="_blank" rel="noopener noreferrer">
-      <img className="dropdown-icon m-2" src={assets.linkedIn} alt="LinkedIn" />
-    </a>
-  </li>
-  <li className="text-center">
-    <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" rel="noopener noreferrer">
-      <img className="dropdown-icon m-2" src={assets.Gmail} alt="Gmail" />
-    </a>
-  </li>
-  <li className="text-center">
-    <a href="https://github.com/Dhanush12212" target="_blank" rel="noopener noreferrer">
-      <img className="dropdown-icon m-2" src={assets.GitHub} alt="GitHub" />
-    </a>
-  </li>
-</ul>
+              <li className="text-center">
+                <a href="https://www.linkedin.com/in/dhanush-abb811259/" target="_blank" rel="noopener noreferrer">
+                  <img className="dropdown-icon m-2" src={assets.linkedIn} alt="LinkedIn" />
+                </a>
+              </li>
+              <li className="text-center">
+                <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" rel="noopener noreferrer">
+                  <img className="dropdown-icon m-2" src={assets.Gmail} alt="Gmail" />
+                </a>
+              </li>
+              <li className="text-center">
+                <a href="https://github.com/Dhanush12212" target="_blank" rel="noopener noreferrer">
+                  <img className="dropdown-icon m-2" src={assets.GitHub} alt="GitHub" />
+                </a>
+              </li>
+            </ul>
 
           </div>
         </div>
