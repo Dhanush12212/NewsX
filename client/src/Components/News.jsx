@@ -24,8 +24,7 @@ const News = (props) => {
         setLoading(true);
 
         try {
-            const url = buildUrl(1);
-            console.log("NewsAPI URL:", url); 
+            const url = buildUrl(1); 
             const response = await fetch(url);
             props.setProgress(30);
 
