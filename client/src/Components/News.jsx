@@ -25,6 +25,7 @@ const News = (props) => {
 
         try {
             const url = buildUrl(1);
+            console.log("NewsAPI URL:", url); 
             const response = await fetch(url);
             props.setProgress(30);
 
@@ -49,7 +50,6 @@ const News = (props) => {
     useEffect(() => {
         document.title = `${capitalizeFirstLetter(props.category)} - NewsX`;
         updateNews();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [props.category, props.country]);
 
     const fetchMoreData = async () => {
