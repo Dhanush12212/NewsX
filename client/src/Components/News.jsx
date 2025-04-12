@@ -15,10 +15,8 @@ const News = (props) => {
         string.charAt(0).toUpperCase() + string.slice(1);
 
     const buildUrl = (pageNumber) => {
-        return `${API_URL}/news?country=${props.country}&category=${props.category}&page=${pageNumber}&pageSize=${props.pageSize}`;
-    };
-      
-
+        return `${API_URL}/news?country=us&category=general&page=1&pageSize=8`; 
+    }; 
     const updateNews = async () => {
         props.setProgress(10);
         setLoading(true);
