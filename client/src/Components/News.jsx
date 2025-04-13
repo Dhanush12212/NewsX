@@ -3,7 +3,7 @@ import NewsItem from './NewsItems';
 import Spinner from './Spinner';
 import PropTypes from 'prop-types';
 import InfiniteScroll from "react-infinite-scroll-component";
-import {API_URL} from './../../config';
+import {API_URL, API_KEY} from '../../config' 
 
 const News = (props) => {
     const [articles, setArticles] = useState([]);
@@ -11,60 +11,57 @@ const News = (props) => {
     const [page, setPage] = useState(1);
     const [totalResults, setTotalResults] = useState(0);
 
-    const capitalizeFirstLetter = (string) =>
-        string.charAt(0).toUpperCase() + string.slice(1);
+    const capitalizeFirstLetter = (string) => {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    };
 
-    const buildUrl = (pageNumber) => {
-        return `${API_URL}/news?country=us&category=general&page=1&pageSize=8`; 
-    }; 
     const updateNews = async () => {
-        props.setProgress(10);
-        setLoading(true);
-
         try {
-            const url = buildUrl(1); 
-            const response = await fetch(url);
+            props.setProgress(10);
+            setLoading(true);
+            
+            let response = await fetch(url); 
             props.setProgress(30);
-
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }
-
-            const parsedData = await response.json();
+            
+            let parsedData = await response.json();
             props.setProgress(70);
-
+            
             setArticles(parsedData.articles || []);
             setTotalResults(parsedData.totalResults || 0);
-            setPage(1);
+            setLoading(false);
         } catch (error) {
             console.error("Failed to fetch news:", error);
         } finally {
-            setLoading(false);
             props.setProgress(100);
         }
     };
-
+    
     useEffect(() => {
-        document.title = `${capitalizeFirstLetter(props.category)} - NewsX`;
+        document.title = `${capitalizeFirstLetter(props.category)} - NewsMonkey`;
         updateNews();
-    }, [props.category, props.country]);
-
+    }, []); 
+    
     const fetchMoreData = async () => {
         try {
             const nextPage = page + 1;
-            const url = buildUrl(nextPage);
-            const response = await fetch(url);
+            
+           
+            let response = await fetch(url);
 
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }
 
-            const parsedData = await response.json();
-            setArticles(prev => [...prev, ...(parsedData.articles || [])]);
-            setTotalResults(parsedData.totalResults || totalResults);
+            let parsedData = await response.json();
+
+            setArticles(prevArticles => [...prevArticles, ...parsedData.articles]);
+            setTotalResults(parsedData.totalResults);
             setPage(nextPage);
-        } catch (error) {
-            console.error("Error fetching more news:", error);
+        } catch(error) {
+            console.log("Error: fetching more news:", error);
         }
     };
 
@@ -73,27 +70,25 @@ const News = (props) => {
             <h1 className="text-center" style={{ margin: '35px 0px', marginTop: '90px' }}>
                 NewsX - Top {capitalizeFirstLetter(props.category)} Headlines
             </h1>
-
             {loading && <Spinner />}
-
             <InfiniteScroll
                 dataLength={articles.length}
                 next={fetchMoreData}
-                hasMore={articles.length < totalResults}
+                hasMore={articles.length !== totalResults}
                 loader={<Spinner />}
             >
                 <div className="container">
                     <div className="row">
                         {articles.map((element) => (
                             <div className="col-md-3" key={element.url}>
-                                <NewsItem
-                                    title={element.title || ""}
-                                    description={element.description || ""}
-                                    imageUrl={element.urlToImage}
-                                    newsUrl={element.url}
-                                    author={element.author}
-                                    date={element.publishedAt}
-                                    source={element.source?.name}
+                                <NewsItem 
+                                    title={element.title || ""} 
+                                    description={element.description || ""} 
+                                    imageUrl={element.urlToImage} 
+                                    newsUrl={element.url} 
+                                    author={element.author} 
+                                    date={element.publishedAt} 
+                                    source={element.source.name} 
                                 />
                             </div>
                         ))}
@@ -114,7 +109,6 @@ News.propTypes = {
     country: PropTypes.string,
     pageSize: PropTypes.number,
     category: PropTypes.string,
-    setProgress: PropTypes.func.isRequired,
 };
 
 export default News;
