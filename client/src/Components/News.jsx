@@ -19,7 +19,7 @@ const News = (props) => {
         try {
             props.setProgress(10);
             setLoading(true);
-            
+            const url = `${API_URL}/top-headlines?country=${props.country}&category=${props.category}&apikey=${API_KEY}&page=${page}&pageSize=${props.pageSize}`;
             let response = await fetch(url); 
             props.setProgress(30);
             if (!response.ok) {
@@ -48,7 +48,7 @@ const News = (props) => {
         try {
             const nextPage = page + 1;
             
-           
+            const url = `${API_URL}/top-headlines?country=${props.country}&category=${props.category}&apikey=${API_KEY}&page=${nextPage}&pageSize=${props.pageSize}`;
             let response = await fetch(url);
 
             if (!response.ok) {
