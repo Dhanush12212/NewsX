@@ -1,33 +1,119 @@
-<h1>NewsX</h1>
+Here’s your updated `README.md` file content with backend integration included. I’ve assumed you're using Express.js for the backend and you're routing News API requests through it for security (based on your previous mention). Let me know if you’re using a different backend setup.
 
-<p>NewX is a real-time news application that leverages a News API to fetch and display the latest news articles. The application is built using React.js for the frontend and styled with Bootstrap to provide a responsive and user-friendly interface.</p>
+---
 
-<h2>Features</h2>
-1. Real-time News Updates: Fetches the latest news in real time from a reliable News API.
-2. Responsive Design: Ensures compatibility across all devices, including desktops, tablets, and smartphones, using Bootstrap.
-3. Category Filters: Allows users to view news articles by categories such as Technology, Sports, Business, and more. 
-4. Lightweight and Fast: Built with React.js, ensuring smooth performance and fast loading times.
+```markdown
+# NewsX
 
-<h2>Tech Stack</h2>
-   Frontend: React.js
+**NewsX** is a real-time news application that fetches and displays the latest news articles using a secure backend proxy for the News API. The application features a responsive frontend built with React.js and styled using Bootstrap.
 
-   Styling: Bootstrap
+---
 
-   API: News API
+## 🚀 Features
 
-<h2>Installation and Setup</h2>
+1. **Real-time News Updates**  
+   Fetches the latest news through a secure backend using News API.
 
-<h3>1. Clone the Repository</h3>
-  git clone https://github.com/Dhanush12212/NewsX.git
-  cd NewX
+2. **Secure API Handling**  
+   API key is securely stored in the backend and not exposed to the frontend.
 
-<h3>2. Install Dependencies</h3>
-  npm install
+3. **Responsive Design**  
+   Built with Bootstrap to ensure compatibility across all devices — desktops, tablets, and smartphones.
 
-<h3>3. Add API Key</h3>
-  Sign up for an API key from the News API.
-  Create a .env file in the root directory and add the following:
-    VITE_NEWS_API_KEY=your_api_key_here
+4. **Category Filters**  
+   Browse news by categories such as Technology, Sports, Business, and more.
 
-<h3>4. Start the Development Server</h3>
-  npm run dev
+5. **Fast & Lightweight**  
+   Optimized React frontend ensures smooth performance and fast loading times.
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend:** React.js (with Vite)
+- **Styling:** Bootstrap
+- **Backend:** Node.js, Express.js
+- **API:** News API
+
+---
+
+## 🧩 Project Structure
+
+```
+NewsX/
+├── client/           # React frontend (Vite)
+├── server/           # Express backend
+├── .env              # Backend environment variables
+└── README.md
+```
+
+---
+
+## ⚙️ Installation and Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Dhanush12212/NewsX.git
+cd NewsX
+```
+
+---
+
+### 2. Setup Backend
+
+```bash
+cd server
+npm install
+```
+
+Create a `.env` file inside the `server` directory:
+
+```
+NEWS_API_KEY=your_api_key_here
+PORT=5000
+```
+
+Start the backend server:
+
+```bash
+npm run dev
+```
+
+---
+
+### 3. Setup Frontend
+
+```bash
+cd ../client
+npm install
+```
+
+Create a `.env` file inside the `client` directory:
+
+```
+VITE_API_BASE_URL=http://localhost:5000
+```
+
+Start the frontend dev server:
+
+```bash
+npm run dev
+```
+
+---
+
+## 📸 Screenshots
+
+*(Add screenshots here if available)*
+
+---
+
+## 📬 API Key
+
+You can get your free API key from [NewsAPI.org](https://newsapi.org/). Make sure to keep your key secret by storing it in the backend `.env` file only.
+
+Free API key cannot be used in the Production!!
+
+---
+ 
