@@ -2,7 +2,6 @@ Here’s your updated `README.md` file content with backend integration included
 
 ---
 
-```markdown
 # NewsX
 
 **NewsX** is a real-time news application that fetches and displays the latest news articles using a secure backend proxy for the News API. The application features a responsive frontend built with React.js and styled using Bootstrap.
@@ -100,12 +99,6 @@ Start the frontend dev server:
 ```bash
 npm run dev
 ```
-
----
-
-## 📸 Screenshots
-
-*(Add screenshots here if available)*
 
 ---
 
